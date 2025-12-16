@@ -166,6 +166,30 @@ class CalculatorApp(ft.Container):
                 self.reset()
             except:
                 self.result.value = "Error"
+        elif data == "ln":
+            try:
+                value = float(self.result.value)
+                if value <= 0:
+                    self.result.value = "Error"
+                else:
+                    self.result.value = self.format_number(
+                        math.log(value)
+        )
+                self.reset()
+            except:
+                self.result.value = "Error"
+        elif data == "ln":
+            try:
+                value = float(self.result.value)
+                if value <= 0:
+                    self.result.value = "Error"
+                else:
+                    self.result.value = self.format_number(
+                        math.log(value)
+        )
+                self.reset()
+            except:
+                self.result.value = "Error"
         self.update()
 
     def format_number(self, num):
