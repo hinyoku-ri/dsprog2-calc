@@ -178,14 +178,14 @@ class CalculatorApp(ft.Container):
                 self.reset()
             except:
                 self.result.value = "Error"
-        elif data == "ln":
+        elif data == "log":
             try:
                 value = float(self.result.value)
                 if value <= 0:
                     self.result.value = "Error"
                 else:
                     self.result.value = self.format_number(
-                        math.log(value)
+                        math.log10(value)
         )
                 self.reset()
             except:
